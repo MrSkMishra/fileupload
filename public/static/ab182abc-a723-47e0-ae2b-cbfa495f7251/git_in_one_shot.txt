@@ -1,0 +1,1578 @@
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git config --global user.name Sonu Kumar Mishra
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git config --global user.name "Sonu Kumar Mishra"
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git config --global user.email mishrasonu9211@gmail.com
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git config --global user.email
+mishrasonu9211@gmail.com
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git config --global user.name
+Sonu Kumar Mishra
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ code .
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder
+$ git init
+Initialized empty Git repository in C:/Users/mishr/OneDrive/Desktop/New folder/.git/
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls -lart
+total 8
+-rw-r--r-- 1 mishr 197609 0 Dec 18 14:08 'git in one shot.txt'
+drwxr-xr-x 1 mishr 197609 0 Dec 18 14:08  ../
+drwxr-xr-x 1 mishr 197609 0 Dec 18 14:13  ./
+drwxr-xr-x 1 mishr 197609 0 Dec 18 14:13  .git/
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git in one shot.txt
+        inex.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add .
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add inex.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git in one shot.txt
+        new file:   inex.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit
+[master (root-commit) a598925] Initial commit
+ 2 files changed, 12 insertions(+)
+ create mode 100644 git in one shot.txt
+ create mode 100644 inex.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch about.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch monuments.htm
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        contact.html
+        monuments.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -m "edit html"
+[master d09a1cc] edit html
+ 3 files changed, 12 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 monuments.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git stautus
+git: 'stautus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git statis
+git: 'statis' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout contact.html
+Updated 1 path from the index
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout -f
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log
+commit d09a1ccabc9521eacdb68d2a63db42aa1761a251 (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:25:53 2022 +0530
+
+    edit html
+
+commit a59892513889e552143b17b35c8dd64a36f06f9a
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:19:47 2022 +0530
+
+    Initial commit
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p -3
+commit d09a1ccabc9521eacdb68d2a63db42aa1761a251 (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:25:53 2022 +0530
+
+    edit html
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..e69de29
+diff --git a/contact.html b/contact.html
+new file mode 100644
+index 0000000..56efbdb
+--- /dev/null
++++ b/contact.html
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/monuments.html b/monuments.html
+new file mode 100644
+index 0000000..e69de29
+
+commit a59892513889e552143b17b35c8dd64a36f06f9a
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:19:47 2022 +0530
+
+    Initial commit
+
+diff --git a/git in one shot.txt b/git in one shot.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/inex.html b/inex.html
+new file mode 100644
+index 0000000..56efbdb
+--- /dev/null
++++ b/inex.html
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git diff
+diff --git a/contact.html b/contact.html
+index 56efbdb..5a1d151 100644
+--- a/contact.html
++++ b/contact.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-
++    sonu
+ </body>
+ </html>
+\ No newline at end of file
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git  diff
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git diff --stage
+error: invalid option: --stage
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git diff --staged
+diff --git a/contact.html b/contact.html
+index 56efbdb..5a1d151 100644
+--- a/contact.html
++++ b/contact.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-
++    sonu
+ </body>
+ </html>
+\ No newline at end of file
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git chechkout -f
+git: 'chechkout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout -f
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -A -m
+error: unknown switch `A'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -A -m "skipped staging area"
+error: unknown switch `A'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -A -m "skipped staging area <"
+error: unknown switch `A'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "skipped staging area <"
+[master 9675218] skipped staging area <
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log
+commit 9675218bb0a5ff6f1962209011ca5251a07a8217 (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:42:19 2022 +0530
+
+    skipped staging area <
+
+commit d09a1ccabc9521eacdb68d2a63db42aa1761a251
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:25:53 2022 +0530
+
+    edit html
+
+commit a59892513889e552143b17b35c8dd64a36f06f9a
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:19:47 2022 +0530
+
+    Initial commit
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls
+ about.html   contact.html  'git in one shot.txt'   inex.html   monuments.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "Adding to waste"
+[master b252f33] Adding to waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm waste.html
+rm 'waste.html'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm --cached wste.html
+fatal: pathspec 'wste.html' did not match any files
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm --cached waste.html
+fatal: pathspec 'waste.html' did not match any files
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ s
+bash: s: command not found
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls
+ about.html    'git in one shot.txt'   monuments.html
+ contact.html   inex.html              waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "Adding Waste"
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls
+ about.html    'git in one shot.txt'   monuments.html
+ contact.html   inex.html              waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm --cahed waste.html
+error: unknown option `cahed'
+usage: git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]
+              [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+              [--] [<pathspec>...]
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm --cached waste.html
+rm 'waste.html'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls
+ about.html    'git in one shot.txt'   monuments.html
+ contact.html   inex.html              waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm waste.html
+rm 'waste.html'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ls
+ about.html   contact.html  'git in one shot.txt'   inex.html   monuments.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit "removing waste"
+error: pathspec 'removing waste' did not match any file(s) known to git
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "removing waste"
+[master 5118a26] removing waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 waste.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p -2
+commit 5118a26f60710b534ce2995201682ec0b13ac8a5 (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:28:37 2022 +0530
+
+    removing waste
+
+diff --git a/waste.html b/waste.html
+deleted file mode 100644
+index e69de29..0000000
+
+commit b252f33868a726a24bd1727b9603d6b3bb0b21bb
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 14:44:24 2022 +0530
+
+    Adding to waste
+
+diff --git a/waste.html b/waste.html
+new file mode 100644
+index 0000000..e69de29
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status -s
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status -s
+ M contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add .
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ gitstatus
+bash: gitstatus: command not found
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status -s
+MM contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status -s
+M  contact.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch .giignore
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch .gitignore
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout inex.html
+Updated 0 paths from the index
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout monuments.html
+Updated 0 paths from the index
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ touch mylogs.log
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        logs/
+        mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   contact.html
+        new file:   logs/mylogs.log
+        new file:   mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   contact.html
+        new file:   logs/mylogs.log
+        new file:   mylogs.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   contact.html
+        new file:   logs/mylogs.log
+        new file:   mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit "ignored some giles"
+error: pathspec 'ignored some giles' did not match any file(s) known to git
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m  "ignored some giles"
+[master 53f8ebb] ignored some giles
+ 4 files changed, 8 insertions(+), 3 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 logs/mylogs.log
+ create mode 100644 mylogs.log
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git rm --cached logs/mylogs.log
+rm 'logs/mylogs.log'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ignore/
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    logs/mylogs.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "commit mesaage"
+[master facedb0] commit mesaage
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+ delete mode 100644 logs/mylogs.log
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p - 3
+fatal: ambiguous argument '3': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p -3
+commit facedb0b3fd2da93b035227a046c3970c7dad66c (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:44:16 2022 +0530
+
+    commit mesaage
+
+diff --git a/.gitignore b/.gitignore
+index 3380c3b..a5c4b2f 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,5 @@
+-mylogs.log
+\ No newline at end of file
++/mylogs.log
++*.log
++*.cpp
++
++ignore/
+\ No newline at end of file
+diff --git a/logs/mylogs.log b/logs/mylogs.log
+deleted file mode 100644
+index dfaf127..0000000
+--- a/logs/mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git branch feature1
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git branch
+  feature1
+* master
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature
+error: pathspec 'feature' did not match any file(s) known to git
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git commit -a -m "fixed extraa status"
+On branch feature1
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+M       contact.html
+M       inex.html
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git branch
+* feature1
+  master
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git commit -a -m "added comment"
+[feature1 ad4254e] added comment
+ 2 files changed, 2 insertions(+), 13 deletions(-)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git branch
+  feature1
+* master
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p -2
+commit facedb0b3fd2da93b035227a046c3970c7dad66c (HEAD -> master)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:44:16 2022 +0530
+
+    commit mesaage
+
+diff --git a/.gitignore b/.gitignore
+index 3380c3b..a5c4b2f 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,5 @@
+-mylogs.log
+\ No newline at end of file
++/mylogs.log
++*.log
++*.cpp
++
++ignore/
+\ No newline at end of file
+diff --git a/logs/mylogs.log b/logs/mylogs.log
+deleted file mode 100644
+index dfaf127..0000000
+--- a/logs/mylogs.log
++++ /dev/null
+@@ -1 +0,0 @@
+-mylogs.log
+
+commit 53f8ebb8548bcb560c66d1d0a2a1cd202f5ce3aa
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:39:15 2022 +0530
+
+    ignored some giles
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..3380c3b
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++mylogs.log
+\ No newline at end of file
+diff --git a/contact.html b/contact.html
+index 4b250eb..52c72aa 100644
+--- a/contact.html
++++ b/contact.html
+@@ -5,8 +5,8 @@
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+-</head>
++</head>rhfgewyfwyevfwevfewv
+ <body>
+     hjwedbedghhwejbew
+-</body>
+-</html>
+\ No newline at end of file
++</body>fwhegfyewgfy
++</html>krugfegfyuegfyeyueb
+\ No newline at end of file
+diff --git a/logs/mylogs.log b/logs/mylogs.log
+new file mode 100644
+index 0000000..dfaf127
+--- /dev/null
++++ b/logs/mylogs.log
+@@ -0,0 +1 @@
++mylogs.log
+diff --git a/mylogs.log b/mylogs.log
+new file mode 100644
+index 0000000..fe0a3ba
+--- /dev/null
++++ b/mylogs.log
+@@ -0,0 +1,3 @@
++processing.......
++downloading..........
++uploading....................
+\ No newline at end of file
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git merge feature1
+Updating facedb0..ad4254e
+Fast-forward
+ contact.html |  2 +-
+ inex.html    | 13 +------------
+ 2 files changed, 2 insertions(+), 13 deletions(-)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git log -p -2
+commit ad4254ec499d5c39cdd250e8e0d9c3134fda7f8a (HEAD -> master, feature1)
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:51:21 2022 +0530
+
+    added comment
+
+diff --git a/contact.html b/contact.html
+index 52c72aa..d711fab 100644
+--- a/contact.html
++++ b/contact.html
+@@ -8,5 +8,5 @@
+ </head>rhfgewyfwyevfwevfewv
+ <body>
+     hjwedbedghhwejbew
+-</body>fwhegfyewgfy
++</body>
+ </html>krugfegfyuegfyeyueb
+\ No newline at end of file
+diff --git a/inex.html b/inex.html
+index 56efbdb..abe6113 100644
+--- a/inex.html
++++ b/inex.html
+@@ -1,12 +1 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
+-</head>
+-<body>
+-
+-</body>
+-</html>
+\ No newline at end of file
++fkjgwefygy
+\ No newline at end of file
+
+commit facedb0b3fd2da93b035227a046c3970c7dad66c
+Author: Sonu Kumar Mishra <mishrasonu9211@gmail.com>
+Date:   Sun Dec 18 17:44:16 2022 +0530
+
+    commit mesaage
+
+diff --git a/.gitignore b/.gitignore
+index 3380c3b..a5c4b2f 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,5 @@
+-mylogs.log
+\ No newline at end of file
++/mylogs.log
++*.log
++*.cpp
++
++ignore/
+\ No newline at end of file
+diff --git a/logs/mylogs.log b/logs/mylogs.log
+deleted file mode 100644
+index dfaf127..0000000
+--- a/logs/mylogs.log
++++ /dev/null
+@@ -1 +0,0 @@
+-mylogs.log
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git branch
+  feature1
+* master
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git checkout about.html
+Updated 0 paths from the index
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout -b sonu
+Switched to a new branch 'sonu'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git branch
+  feature1
+  master
+* sonu
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git status
+On branch sonu
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __init__.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git add -A
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git commit  -m "Flask minimal File "
+[sonu 26f77b2] Flask minimal File
+ 1 file changed, 9 insertions(+)
+ create mode 100644 __init__.py
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git commit -a -m "modified index.html"
+[master 69e8699] modified index.html
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout sonu
+Switched to branch 'sonu'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git status
+On branch sonu
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git checkout master
+Switched to branch 'master'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote add origin https://github.com/MrSkMishra/git-in-one-vdeo.git
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote
+origin
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote -v
+origin  https://github.com/MrSkMishra/git-in-one-vdeo.git (fetch)
+origin  https://github.com/MrSkMishra/git-in-one-vdeo.git (push)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git push origin master
+warning: could not find UI helper 'GitHub.UI'
+
+
+q
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ^C
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ssh-keygen -t rsa -b 4096 -C "mishrasonu9211@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/mishr/.ssh/id_rsa):
+Created directory '/c/Users/mishr/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/mishr/.ssh/id_rsa
+Your public key has been saved in /c/Users/mishr/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:nRbbltzyP8UeiMGrFtANL8yuB/uwf1Ji1bV/SqV69B0 mishrasonu9211@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|         .     . |
+|        + * . . .|
+|       . * % + ..|
+|        S B X o+.|
+|       . * = ++E=|
+|       .= =  +.+*|
+|       oo= .. oo+|
+|       .=oo  .  o|
++----[SHA256]-----+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ eval $(ssh-agent -s)
+Agent pid 1198
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/mishr/.ssh/id_rsa (mishrasonu9211@gmail.com)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4Tz7z+JrYJPP30+yWU10fjxo6URdRETy45oTGY9i1EzZSO7YCsITH91qU7MuGR/zn/qum55UKYO2FXNHlXhlLrH6kjhfyrIZs7nCOWyqFv7NKV5C44oRgKnP2sjNZ2arNBRWBiTUBoSH9Q/KlM4DTDe2PlN2T4oImvw47BQ7MzcZBpZdzVfZLDHLTxSI8idblSS83FgKx03L0MR5xLNwJjUFZ9JC4AjWhaCTUkBl81p7KHgJVkoQltPnzZWNeUUNNVLVZMmeQyhI0PfvDDhFeePBTP/v7+3yX7vcxZzLeznG5fDYrBX6aNe+4QemLbkfbXwqXwElEQyZQ2RSVDUDyemDvDLpC+Uu2n4KNrvTz+EV0DPlZVonTFpLjxUcgT9OLYUdzxtWBrNAecIO58OcNlzFb6QCOfSis4YzLbodGihMFMwBBHQ8EIsqbQRY3xjg+A1n0gCUYkgfJkcsizhaBWMJE3G6EHmwyezPwJYXrlLvJKOr0Xaefmbk/L/InsaRMTT7qWHtN1VtcLf/N8MY2TNGvnklH/hv7My04aQ6WdG8NENQ7Wj+Aveo/7jOwTX8eqKpH/WyPZ5TuZlWJftX7jsdxGksRJfHXmSKWenJSMqEmALE8Sq+wq52EdT1oUQD2fDrzn73XTNrD9F10CBKC8uH1HWh9srVD7lbAwNudnw== mishrasonu9211@gmail.com
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git push -u origin master
+warning: could not find UI helper 'GitHub.UI'
+
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote set-url origin git@github.com:MrSkMishra/git-in-one-vdeo.git
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote
+origin
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git remote -v
+origin  git@github.com:MrSkMishra/git-in-one-vdeo.git (fetch)
+origin  git@github.com:MrSkMishra/git-in-one-vdeo.git (push)
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (29/29), 2.58 KiB | 240.00 KiB/s, done.
+Total 29 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), done.
+To github.com:MrSkMishra/git-in-one-vdeo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout sonu
+Switched to branch 'sonu'
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git push -u origin sonu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 411 bytes | 411.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'sonu' on GitHub by visiting:
+remote:      https://github.com/MrSkMishra/git-in-one-vdeo/pull/new/sonu
+remote:
+To github.com:MrSkMishra/git-in-one-vdeo.git
+ * [new branch]      sonu -> sonu
+branch 'sonu' set up to track 'origin/sonu'.
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$ git push
+Everything up-to-date
+
+mishr@DESKTOP-4HU99I4 MINGW64 ~/OneDrive/Desktop/New folder (sonu)
+$
